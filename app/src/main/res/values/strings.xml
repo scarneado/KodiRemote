@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Kodi Remote</string>
+    <string name="host_button">Connect</string>
+    <string name="ip_pompt">Please enter the Host IP Address</string>
+    <string name="ip_field_hint">Enter IP here</string>
+    <string name="select_button">Select</string>
+    <string name="back_button">Back</string>
+    <string name="home_button">Home</string>
+    <string name="info_button">Info</string>
+    <string name="invalid_ip">IP address is not valid</string>
+    <string name="exodus_button">Exodus</string>
+</resources>

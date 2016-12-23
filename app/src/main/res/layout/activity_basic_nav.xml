@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_basic_nav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="scarneado.com.kodiremote.BasicNavActivity">
+
+    <Button
+        android:id="@+id/home_button"
+        android:text="@string/home_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_button"
+        android:onClick="clickHome"
+        android:layout_alignBaseline="@+id/info_button"
+        android:layout_alignBottom="@+id/info_button"
+        android:layout_alignStart="@+id/select_button" />
+
+    <Button
+        android:id="@+id/info_button"
+        android:text="@string/info_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_button"
+        android:onClick="clickInfo"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/down_button"
+        android:layout_alignEnd="@+id/left_button" />
+
+    <Button
+        android:id="@+id/down_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/down_button"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/select_button"
+        android:layout_alignStart="@+id/up_button"
+        android:onClick="clickDown"/>
+
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/left_button"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBaseline="@+id/select_button"
+        android:layout_alignBottom="@+id/select_button"
+        android:layout_toStartOf="@+id/select_button"
+        android:onClick="clickLeft"/>
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/right_button"
+        android:layout_toRightOf="@+id/select_button"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:onClick="clickRight"/>
+
+    <Button
+        android:id="@+id/back_button"
+        android:text="@string/back_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_button"
+        android:onClick="clickBack"
+        android:layout_alignBaseline="@+id/home_button"
+        android:layout_alignBottom="@+id/home_button"
+        android:layout_alignStart="@+id/right_button" />
+
+    <Button
+        android:id="@+id/play_button"
+        android:text="Play/Pause"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_button"
+        android:onClick="clickPlayPause"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/up_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/exodus_select"
+        android:text="@string/exodus_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_button"
+        android:onClick="clickExodus"
+        android:layout_alignBottom="@id/play_button"
+        android:layout_alignStart="@id/info_button"
+        android:layout_marginBottom="80dp"
+         />
+
+    <Button
+        android:id="@+id/select_button"
+        android:text="@string/select_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/select_button"
+        android:onClick="clickSelect"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+       />
+
+    <Button
+        android:id="@+id/up_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/up_button"
+        android:onClick="clickUp"
+        android:layout_above="@+id/select_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
