@@ -1,7 +1,9 @@
 package scarneado.com.kodiremote;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -131,7 +133,7 @@ public class BasicNavActivity extends AppCompatActivity {
         sendRequest(jsonReq);
     }
 
-    public void clickExodus(View view) {
+    public void clickAddons(View view) {
         requestId++;
 
         jsonReq = JSONBuilder.createJSONObject("Addons.ExecuteAddon","plugin.video.exodus", requestId);
@@ -157,4 +159,32 @@ public class BasicNavActivity extends AppCompatActivity {
     }
 
 
+    public void clickPower(View view) {
+        //Verify user wants to power off Kodi
+        AlertDialog.Builder builder = new AlertDialog.Builder(BasicNavActivity.this);
+
+        builder.setMessage(R.string.power_off_message);
+
+        builder.setPositiveButton(R.string.power_off_confirm, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //Send Kodi Shutdown request
+                requestId++;
+
+                jsonReq = JSONBuilder.createJSONObject("System.Shutdown", requestId);
+                sendRequest(jsonReq);
+            }
+        });
+
+        builder.setNegativeButton(R.string.power_off_cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //Dialog Cancelled
+            }
+        });
+
+        //Create and display dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }

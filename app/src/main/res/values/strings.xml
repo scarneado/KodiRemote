@@ -8,5 +8,9 @@
     <string name="home_button">Home</string>
     <string name="info_button">Info</string>
     <string name="invalid_ip">IP address is not valid</string>
-    <string name="exodus_button">Exodus</string>
+    <string name="addons_button">Addons</string>
+    <string name="power_button">Power</string>
+    <string name="power_off_message">Are you sure you want to turn off Kodi?</string>
+    <string name="power_off_confirm">Yes</string>
+    <string name="power_off_cancel">Cancel</string>
 </resources>
