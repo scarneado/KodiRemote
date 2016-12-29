@@ -8,12 +8,13 @@ import org.json.JSONObject;
  */
 
 public class JSONBuilder {
-    public static String requestStart = "{jsonrpc: '2.0', method: ";
-    public static String simpleRequestEnd = ", id: ";
-    public static String requestParams = ", params: {playerid: ";
-    public static String exodusParams = ", params: {addonid: ";
-    public static String requestEnd = " }, id: ";
-    public static String end = "}";
+    private static String requestStart = "{jsonrpc: '2.0', method: ";
+    private static String simpleRequestEnd = ", id: ";
+    private static String requestParams = ", params: {playerid: ";
+    private static String addonRequestParam = ", params: {addonid: ";
+    private static String generalRequestParam = ", params: {";
+    private static String requestEnd = " }, id: ";
+    private static String end = "}";
 
     public static JSONObject createJSONObject(String requestType, int reqId){
         JSONObject jObj = null;
@@ -44,9 +45,23 @@ public class JSONBuilder {
         JSONObject jObj = null;
 
         try{
-            jObj = new JSONObject(requestStart + requestType + exodusParams + addonID + requestEnd +
+            jObj = new JSONObject(requestStart + requestType + addonRequestParam + addonID + requestEnd +
                     reqId + end);
         }catch(JSONException e){
+            System.out.println("JSON creation error");
+        }
+
+        return jObj;
+    }
+
+    public static JSONObject createJSONObject(String requestType, String param, String pData,
+                                              int reqID){
+        JSONObject jObj = null;
+
+        try{
+            jObj = new JSONObject(requestStart + requestType + generalRequestParam + param + ": " +
+            pData + requestEnd + reqID + end);
+        }catch (JSONException e){
             System.out.println("JSON creation error");
         }
 

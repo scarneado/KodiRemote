@@ -134,10 +134,13 @@ public class BasicNavActivity extends AppCompatActivity {
     }
 
     public void clickAddons(View view) {
-        requestId++;
+        //Create intent for addons view
+        Intent addonsActivity = new Intent(this, AddonsActivity.class);
+        addonsActivity.putExtra("url", httpURL);
+        addonsActivity.putExtra("reqID", requestId);
+        addonsActivity.putExtra("ip", ipAddress);
 
-        jsonReq = JSONBuilder.createJSONObject("Addons.ExecuteAddon","plugin.video.exodus", requestId);
-        sendRequest(jsonReq);
+        startActivity(addonsActivity);
     }
 
     private void sendRequest(JSONObject jsonReq){
