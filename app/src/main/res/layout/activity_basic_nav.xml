@@ -142,4 +142,17 @@
         android:layout_alignEnd="@id/back_button"
         android:layout_marginBottom="80dp"/>
 
+    <Button
+        android:id="@+id/context_menu_button"
+        android:text="@string/context_menu_button"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:background="@drawable/nav_button"
+        android:onClick="clickMenu"
+        android:layout_alignBottom="@id/play_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"/>
+
 </RelativeLayout>

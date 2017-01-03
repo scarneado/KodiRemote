@@ -190,4 +190,11 @@ public class BasicNavActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+    public void clickMenu(View view) {
+        requestId++;
+
+        jsonReq = JSONBuilder.createJSONObject("Input.ContextMenu", requestId);
+        sendRequest(jsonReq);
+    }
 }

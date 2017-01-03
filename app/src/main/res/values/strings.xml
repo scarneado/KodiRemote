@@ -13,4 +13,5 @@
     <string name="power_off_message">Are you sure you want to turn off Kodi?</string>
     <string name="power_off_confirm">Yes</string>
     <string name="power_off_cancel">Cancel</string>
+    <string name="context_menu_button">Menu</string>
 </resources>
