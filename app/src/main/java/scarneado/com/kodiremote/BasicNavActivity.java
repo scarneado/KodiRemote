@@ -50,7 +50,7 @@ public class BasicNavActivity extends AppCompatActivity {
         ipAddress = getIntent().getStringExtra("ipAddress");
 
         //Create url string
-        httpURL = "http://" + ipAddress + ":80/jsonrpc";
+        httpURL = "http://" + ipAddress + ":8080/jsonrpc";
         requestId = 0;
         jsonReq = null;
 

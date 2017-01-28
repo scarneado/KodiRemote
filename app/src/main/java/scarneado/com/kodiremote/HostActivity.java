@@ -57,7 +57,7 @@ public class HostActivity extends AppCompatActivity {
     //request to server for validation.
     public void validateIp(){
 
-        httpURL = "http://" + ipAddress + ":80/jsonrpc";
+        httpURL = "http://" + ipAddress + ":8080/jsonrpc";
         jObj = JSONBuilder.createJSONObject("JSONRPC.Version", 0);
         sendRequest(jObj);
     }
